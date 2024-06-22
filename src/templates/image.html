@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<base href="./">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片预览</title>
+<link href="{{ url_for('static', filename='style1.css') }}" rel="stylesheet">
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="app flex-row align-items-center">
+<div class="container"> 
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div> </div>
+      <div class="clearfix">
+        <div class="card-header" style="height:120px;margin-top:5px;">
+          <p class="text-muted">员工照片</p>
+          <p class="text-muted">{{ ID }}</p>
+          <p class="text-muted">{{ name }}</p>
+          <div class="card-body">
+            <p class="text-muted"></p>
+          </div>
+        </div>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <img src="{{ url_for('static', filename=path) }}">
+    <div class="col-md-6">
+      <div class="card"> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
